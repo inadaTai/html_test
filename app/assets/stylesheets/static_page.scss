@@ -1,0 +1,225 @@
+/*page*/
+.inr{
+width:960px;
+margin:0 auto;
+  }
+
+/*page-header*/
+/*横の並び*/
+.page-header{
+  padding: 17px 0;
+}
+.page-header-inr{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*横の並び*/
+.page-header__info{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  /*縦の並び*/
+  .page-header-info_txt span{
+    display:block;
+    margin-right: 30px;
+  }
+.page-info-contact__btn{
+  background: red;
+  width:150px;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+
+
+/*main*/
+.main-visual {
+  position: relative;
+  height: 480px;
+  background: center center no-repeat;
+
+  background-size: cover;
+  background-color: orange;
+}
+ .main-visual_ttl{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: normal;
+    font-size: 70px;
+    font-family: "YuGothic", "游ゴシック";
+    transform: translate(-50%, -50%);
+  }
+
+/*メインコンテンツ内のCSS*/
+.section-header{
+  position: relative;
+  padding: calc((87px - (30px * 1.6)) / 2) 0;
+  text-align:center;
+  background: #aaa;
+  }
+  .section-header__ttl{
+  color:#fff;
+  font-weight: normal;
+  font-size: 30px;
+  }
+  .section-header:after{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    border-color:#aaa transparent transparent transparent;
+    border-style:  solid;
+    border-width:  28px 28px 0;
+    transform: translate(-50%, 100%);
+    content: "";
+    }
+.intro-section{
+  background: gray;
+  text-align: center;
+  padding:30px 0;
+  position: relative;
+}
+.intro-section__header{
+font-weight: normal;
+font-size: 30px;
+color: #fff;
+}
+.section-header__ttl{
+  margin-bottom: 100px;
+}
+.intro-section-nav{
+  padding:88px 0 80px;
+}
+
+.intro-section-nav ol{
+display:flex;
+justify-content: space-between;
+width:810px;
+margin:0 auto;
+}
+/*上記のjustifyこれで図形のところ間隔を開ける調整してます。*/
+.intro-section-nav ol li{
+position: relative;
+}
+/*三角形を作成します。*/
+.intro-section-nav ol li:after{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  width:20px;
+  height: 20px;
+  border-right: 2px solid black;
+ border-bottom:2px solid black;
+ transform: translateX(-50%) rotate(45deg);
+ content: "";
+}
+/*上記のrelative相対位置に置くそうですが
+機能してるか不明*/
+.intro-section-nav ol li a{
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+width: 230px;
+height: 230px;
+padding: 0 25px;
+color:#000;
+font-size:25px;
+border:2px solid #000;
+border-radius:50%;
+}
+/*上記はテキスト欄の内容になる要素を横に並べるflex
+align-itemsで真ん中によせてます。
+justifyも要素内の真ん中寄せに使用されてますが機能してるか不明
+border-radiusは四角い図形を丸くするため使用
+*/
+.intro-section-content__block{
+display: flex;
+height:400px;
+}
+.intro-section-content__block > *{
+width:50%;
+}
+/*偶数盤目の場合横並びを反転させる*/
+.intro-section-content__block:nth-child(even){
+  flex-direction: row-reverse;
+}
+/*各画像を設定*/
+.intro-section-content__block:nth-child(1) .intro-section__img-area{
+  background-image: url("/10.JPG");
+}
+.intro-section-content__block:nth-child(2) .intro-section__img-area{
+background-image: url("/12.JPG");
+}
+.intro-section-content__block:nth-child(3) .intro-section__img-area{
+background-image: url("/11.JPG");
+}
+
+
+/*画像挿入*/
+.intro-section__img-area{
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.intro-section__txt-area{
+box-sizing: border-box;
+padding: 30px 20px;
+color: #fff;
+background-color: gray;
+}
+/*コンテンツのタイトル*/
+.intro-section__txt-area h4{
+  margin-bottom:24px;
+font-size: 2rem;
+  font-weight: normal;
+  line-height:1.5;
+}
+/*コンテンツの文章（中身）*/
+.intro-section__txt-area p{
+font-size: 1.6rem;
+line-height:1.5;
+}
+/*お問い合わせCSS*/
+.intro-section-contact{
+  padding: 100px 0;
+  background: white;
+}
+/*上記はメインコンテンツのところより離すため
+paddingで上下100px開けた*/
+.intro-section-contact-block{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 40px 55px;
+background: gray;
+}
+.contact-block__txt{
+font-size: 24px;
+  }
+  .contact-block__txt span{
+  font-size: 20px;
+  display:block;
+    }
+  /**/
+.intro-section-contact-block__btn{
+  width:370px;
+  padding: 20px 0;
+  background: red;
+  color:#fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/*page-footer*/
+.page-footer{
+  padding:40px 0px;
+  background-color: gray;}
+  .page-footer small{
+    font-size:1.2rem;
+  }
